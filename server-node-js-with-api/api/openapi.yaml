@@ -1,0 +1,112 @@
+openapi: 3.0.0
+info:
+  title: API de Puzzix
+  description: |
+    APIs pour l'architecture de l'application Puzzix.
+
+    Contact :
+    - Nom : Matthieu Fanget
+    - Email : matthieu.fanget@livecampus.tech
+
+    - Nom : Aymeric Surre
+    - Email : aymeric.surre@livecampus.tech
+  version: 1.0.0
+servers:
+- url: /
+paths:
+  /api/login:
+    post:
+      summary: Connexion de l'utilisateur
+      operationId: apiLoginPOST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/api_login_body'
+      responses:
+        "200":
+          description: Connexion réussie
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+      x-swagger-router-controller: Default
+  /api/upload:
+    post:
+      summary: Télécharger une image
+      operationId: apiUploadPOST
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/api_upload_body'
+      responses:
+        "200":
+          description: Image téléchargée avec succès
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+      x-swagger-router-controller: Default
+  /api/applyEffect:
+    post:
+      summary: Appliquer un effet sur une image
+      operationId: apiApplyEffectPOST
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/api_applyEffect_body'
+      responses:
+        "200":
+          description: Effet appliqué avec succès
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_1'
+      x-swagger-router-controller: Default
+components:
+  schemas:
+    api_login_body:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+    inline_response_200:
+      type: object
+      properties:
+        status:
+          type: number
+        message:
+          type: string
+      example:
+        message: message
+        status: 0.80082819046101150206595775671303272247314453125
+    api_upload_body:
+      type: object
+      properties:
+        image:
+          type: string
+          format: binary
+        transformations:
+          type: array
+    api_applyEffect_body:
+      type: object
+      properties:
+        image:
+          type: string
+          format: binary
+        effectDetails:
+          type: object
+    inline_response_200_1:
+      type: object
+      properties:
+        status:
+          type: number
+        transformedImage:
+          type: string
+      example:
+        transformedImage: transformedImage
+        status: 0.80082819046101150206595775671303272247314453125

@@ -1,0 +1,19 @@
+{
+  "name": "architecture-application",
+  "version": "1.0.0",
+  "description": "Code projet Puzzix, Matthieu &amp; Aymeric",
+  "main": "bill.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matthieu73110/architecture-application.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matthieu73110/architecture-application/issues"
+  },
+  "homepage": "https://github.com/Matthieu73110/architecture-application#readme"
+}
