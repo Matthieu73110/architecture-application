@@ -26,22 +26,22 @@ Installation
 ------------
 
 1. Clonez le dépôt :
-git clone https://github.com/Matthieu73110/architecture-application
+`git clone https://github.com/Matthieu73110/architecture-application`
 
 
 2. Accédez au dossier du projet :
-cd chemin_vers_le_dossier
+`cd chemin_vers_le_dossier`
 
 
 3. Installez les dépendances :
-npm install
+`npm install`
 
 
 Lancer le projet
 ----------------
 
 Pour démarrer le projet :
-node bill.js
+`node bill.js`
 
 
 Fonctionnement
