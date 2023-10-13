@@ -32,8 +32,12 @@ Installation
 2. Accédez au dossier du projet :
 `cd chemin_vers_le_dossier`
 
+3. Initialiser le projet :
+`npm init`
+Laissez les valeurs par défauts
 
-3. Installez les dépendances :
+
+5. Installez les dépendances :
 `npm install`
 
 
