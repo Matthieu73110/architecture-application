@@ -1,1 +1,3 @@
-{"operations":[{"operationType":"filter","operationDetails":{"filterName":"grayscale"}},{"operationType":"effect","operationDetails":{"effectName":"rotation"}},{"operationType":"effect","operationDetails":{"effectName":"zoom"}},{"operationType":"filter","operationDetails":{"filterName":"sepia"}}]}
+{"operations":[
+  
+]}
